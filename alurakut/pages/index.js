@@ -6,15 +6,22 @@ import Box from '../src/components/Box'
   color: ${({ theme }) => theme.colors.primary};
 ` */
 
-
+function ProfileSidebar(props){
+  
+  console.log("PROPRIEDADES",props);
+  return (
+    <Box>
+      <img src={`https://github.com/${props.gitHubUser}.png`} style={{borderRadius: '8px'}}></img>
+    </Box>
+  );
+}
 
 export default function Home() {
+  const gitHubUser = 'estevaoreis25';  
   return (
     <MainGrid>
       <div className="profileArea" style={{gridArea: 'profileArea'}}>
-        <Box>
-          <img src="https://github.com/estevaoreis25.png"></img>
-        </Box>
+        <ProfileSidebar gitHubUser={gitHubUser}/>
       </div>
 
       <div className="welcomeArea" style={{gridArea: 'welcomeArea'}}>
