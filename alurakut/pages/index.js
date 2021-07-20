@@ -19,6 +19,12 @@ function ProfileSidebar(props){
 
 export default function Home() {
   const gitHubUser = 'estevaoreis25';  
+  const pessoasFavoritas = ['DenysRogeres', 
+  'marcelog5', 
+  'emysdias', 
+  'Rocsantos',
+  'sergiosacj'
+]
   return (
     <>
     <AlurakutMenu/>
@@ -34,8 +40,16 @@ export default function Home() {
         </div>
 
         <div className="profileRelationsArea" style={{gridArea: 'profileRelationsArea'}}>
-          <Box>
-            Pessoas da Comunidade
+          <Box >
+            <h2 className="smallTitle" >Pessoas da Comunidade ({pessoasFavoritas.length})</h2>
+            {pessoasFavoritas.map((itemAtual)=>{
+              return(
+                <a href={`/users/${itemAtual}`} key={itemAtual}>
+                  <img src={`https://github.com/${itemAtual}.png`}></img>
+                  <span>{itemAtual}</span>
+                </a>
+              );
+            })}
           </Box>
           <Box>
             Comunidades
