@@ -31,7 +31,8 @@ export default function Home() {
   'emysdias', 
   'Rocsantos',
   'sergiosacj'
-]
+  ]
+  const comunidades = ['Alurakut'] 
   return (
     <>
     <AlurakutMenu/>
@@ -46,6 +47,34 @@ export default function Home() {
             Bem Vindo(a)
             </h>
             <OrkutNostalgicIconSet/>
+          </Box>
+
+          <Box>
+            <h2 className="subTitle">O que voce deseja fazer?</h2>
+            <form onSubmit={function handleCriaComunidade(e){
+              e.preventDefault();
+            }}>
+              <div>
+                <input 
+                placeholder="Qual vai ser o nome da sua comunidade?" 
+                name="title" 
+                aria-lable="Qual vai ser o nome da sua comunidade?"
+                />
+              </div>
+
+              <div>
+                <input 
+                placeholder="Coloque uma URL para usarmos de capa" 
+                name="image" 
+                aria-lable="Coloque uma URL para usarmos de capa"
+                />
+              </div>
+
+              <button>
+                Criar Comunidade
+              </button>
+
+            </form>
           </Box>
         </div>
 

@@ -47,13 +47,13 @@ const Box = styled.div`
       color: #333333;
       opacity: 1;
     }
-    button {
-      border: 0;
-      padding: 8px 12px;
-      color: #ffffff;
-      border-radius: 10000px;
-      background-color: #6F92BB;
-    }
+  }
+  button {
+    border: 0;
+    padding: 8px 12px;
+    color: #ffffff;
+    border-radius: 10000px;
+    background-color: #6F92BB;
   }
 `;
 
